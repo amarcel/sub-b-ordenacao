@@ -17,5 +17,31 @@ public class Ordenacao {
             return vetor;
         } // fim do método selectionSort
         
+        public static int[] bubbleSort(int[] vetor) {
+            for (int esquerda = 0; esquerda < vetor.length; esquerda++) {
+                for (int direita = esquerda+1; direita < vetor.length; direita++) {
+                    if (vetor[esquerda] > vetor[direita]) {
+                        // troca:
+                        int aux = vetor[esquerda];
+                        vetor[esquerda] = vetor[direita];
+                        vetor[direita] = aux;
+                    } // fim do if
+                } // fim do for direita
+            } // fim do for esquerda
+            return vetor;
+        } // fim do método bubbleSort
+        
+        public static int[] insertionSort(int[] vetor) {
+            for (int i = 1; i < vetor.length; i++) {
+                int chave = vetor[i];
+                int j = i - 1;
+                while (j >= 0 && vetor[j] > chave) {
+                    vetor[j+1] = vetor[j];
+                    j--;
+                } // fim do while
+                vetor[j+1] = chave;
+            } // fim do for
+            return vetor;
+        } // fim do método insertionSort
         
 } // fim da classe

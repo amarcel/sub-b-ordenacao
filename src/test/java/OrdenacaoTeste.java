@@ -29,6 +29,8 @@ public class OrdenacaoTeste {
     @After
     public void tearDown() {
     }
+    
+    // SELECTION SORT:
 
     @Test
     public void testarNumerosIguaisSelectionSort() {
@@ -48,6 +50,52 @@ public class OrdenacaoTeste {
     public void testarNumerosNegativosSelectionSort() {
         int[] vetor = {-7, -3, -1, -13, -5};
         int[] retorno = Ordenacao.selectionSort(vetor);
+        assertArrayEquals(new int[] {-13, -7, -5, -3, -1}, retorno);
+    }
+    
+    // BUBBLE SORT:
+    
+    @Test
+    public void testarNumerosIguaisBubbleSort() {
+        int[] vetor = {3,3,3,3,3};
+        int[] retorno = Ordenacao.bubbleSort(vetor);
+        assertArrayEquals(new int[] {3,3,3,3,3}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosPositivosBubbleSort() {
+        int[] vetor = {2, 9, 0, 4, 1, 8, 6, 7, 3, 5};
+        int[] retorno = Ordenacao.bubbleSort(vetor);
+        assertArrayEquals(new int[] {0,1,2,3,4,5,6,7,8,9}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosNegativosBubbleSort() {
+        int[] vetor = {-7, -3, -1, -13, -5};
+        int[] retorno = Ordenacao.bubbleSort(vetor);
+        assertArrayEquals(new int[] {-13, -7, -5, -3, -1}, retorno);
+    }
+    
+    // INSERTION SORT:
+    
+    @Test
+    public void testarNumerosIguaisInsertionSort() {
+        int[] vetor = {3,3,3,3,3};
+        int[] retorno = Ordenacao.insertionSort(vetor);
+        assertArrayEquals(new int[] {3,3,3,3,3}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosPositivosInsertionSort() {
+        int[] vetor = {2, 9, 0, 4, 1, 8, 6, 7, 3, 5};
+        int[] retorno = Ordenacao.insertionSort(vetor);
+        assertArrayEquals(new int[] {0,1,2,3,4,5,6,7,8,9}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosNegativosInsertionSort() {
+        int[] vetor = {-7, -3, -1, -13, -5};
+        int[] retorno = Ordenacao.insertionSort(vetor);
         assertArrayEquals(new int[] {-13, -7, -5, -3, -1}, retorno);
     }
     
