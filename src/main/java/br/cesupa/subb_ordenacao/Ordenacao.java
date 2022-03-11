@@ -44,4 +44,28 @@ public class Ordenacao {
             return vetor;
         } // fim do método insertionSort
         
+        public static int[] mergeSort(int[] vetor, int tamanho) {
+            if (tamanho < 2) return null;
+            int meio = tamanho / 2;
+            int[] vesq = new int[meio];
+            int[] vdir = new int[tamanho-meio];
+            // FAÇA
+        } // fim do mergeSort
+
+//funcao mergeSort(vetor, tamanho)
+//    se (tamanho < 2)
+//        return;
+//    int meio = tamanho / 2;
+//    int[] vesq = new int[meio];
+//    int[] vdir = new int[tamanho-meio];
+//    para (i = 0; i < meio; i++)
+//        vesq[i] = vetor[i];
+//    para (i = meio; i < tamanho; i++)
+//        vdir[i-meio] = vetor[i];
+//    mergeSort(vesq, meio);
+//    mergeSort(vdir, tamanho-meio);
+//    merge(vetor, vesq, vdir, meio, tamanho-meio);
+//fim_funcao
+
+        
 } // fim da classe
