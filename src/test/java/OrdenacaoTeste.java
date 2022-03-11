@@ -99,4 +99,50 @@ public class OrdenacaoTeste {
         assertArrayEquals(new int[] {-13, -7, -5, -3, -1}, retorno);
     }
     
+    // MERGE SORT:
+ 
+    @Test
+    public void testarNumerosIguaisMergeSort() {
+        int[] vetor = {3,3,3,3,3};
+        int[] retorno = Ordenacao.mergeSort(vetor, vetor.length);
+        assertArrayEquals(new int[] {3,3,3,3,3}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosPositivosMergeSort() {
+        int[] vetor = {2, 9, 0, 4, 1, 8, 6, 7, 3, 5};
+        int[] retorno = Ordenacao.mergeSort(vetor, vetor.length);
+        assertArrayEquals(new int[] {0,1,2,3,4,5,6,7,8,9}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosNegativosMergeSort() {
+        int[] vetor = {-7, -3, -1, -13, -5};
+        int[] retorno = Ordenacao.mergeSort(vetor, vetor.length);
+        assertArrayEquals(new int[] {-13, -7, -5, -3, -1}, retorno);
+    }
+    
+    // QUICK SORT:
+ 
+    @Test
+    public void testarNumerosIguaisQuickSort() {
+        int[] vetor = {3,3,3,3,3};
+        int[] retorno = Ordenacao.quickSort(vetor, 0, vetor.length-1);
+        assertArrayEquals(new int[] {3,3,3,3,3}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosPositivosQuickSort() {
+        int[] vetor = {2, 9, 0, 4, 1, 8, 6, 7, 3, 5};
+        int[] retorno = Ordenacao.quickSort(vetor, 0, vetor.length-1);
+        assertArrayEquals(new int[] {0,1,2,3,4,5,6,7,8,9}, retorno);
+    }
+    
+    @Test
+    public void testarNumerosNegativosQuickSort() {
+        int[] vetor = {-7, -3, -1, -13, -5};
+        int[] retorno = Ordenacao.quickSort(vetor, 0, vetor.length-1);
+        assertArrayEquals(new int[] {-13, -7, -5, -3, -1}, retorno);
+    }
+    
 }

@@ -1,5 +1,7 @@
 package br.cesupa.subb_ordenacao;
 
+import java.util.Arrays;
+
 public class Ordenacao {
 
     public static int[] selectionSort(int[] vetor) {
@@ -85,7 +87,9 @@ public class Ordenacao {
         if (inicio < fim) {
             int posicaoPivo = separar(vetor, inicio, fim);
             quickSort(vetor, inicio, posicaoPivo - 1);
+//            System.out.println(Arrays.toString(vetor));
             quickSort(vetor, posicaoPivo + 1, fim);
+//            System.out.println(Arrays.toString(vetor));
         }
         return vetor;
     }
